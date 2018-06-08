@@ -112,7 +112,6 @@ class SwarmSpawner(DockerSpawner):
                     source=host_loc,
                     type="bind",
                     read_only=vol["mode"] == "ro",
-                    driver_config=driver,
                 )
                 for host_loc, vol in self.volume_binds.items()
             ]
